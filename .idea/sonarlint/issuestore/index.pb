@@ -31,3 +31,5 @@ l
 <src/main/java/com/spring/course_spring/config/TetConfig.java,e/2/e2896139a20e4d6115fc8f2fb7166060c0b9b297
 p
 @src/main/java/com/spring/course_spring/services/UserService.java,a/d/adc26ee64050ee59950705d6d59d43d6c9d8f26d
+j
+:src/main/java/com/spring/course_spring/entities/Order.java,9/4/94803860c9c68ab8e85c6b8448a52496ec4c4a94
