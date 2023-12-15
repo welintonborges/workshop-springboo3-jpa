@@ -1,8 +1,10 @@
 package com.spring.course_spring.config;
 
+import com.spring.course_spring.entities.Category;
 import com.spring.course_spring.entities.Order;
 import com.spring.course_spring.entities.User;
 import com.spring.course_spring.entities.enums.OrderStatus;
+import com.spring.course_spring.repositories.CategoryRepository;
 import com.spring.course_spring.repositories.OrderRepository;
 import com.spring.course_spring.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,8 @@ public class TetConfig implements CommandLineRunner {
     private UserRepository userRepository;
     @Autowired
     private OrderRepository orderRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
     @Override
     public void run(String... args) throws Exception {
 
@@ -35,6 +39,12 @@ public class TetConfig implements CommandLineRunner {
         Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), OrderStatus.PAID, u1);
 
         orderRepository.saveAll(Arrays.asList(o1,o2,o3));
+
+        Category cat1 = new Category(null, "Electronics");
+        Category cat2 = new Category(null, "Books");
+        Category cat3 = new Category(null, "Computers");
+
+        categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 
     }
 }
