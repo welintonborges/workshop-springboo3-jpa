@@ -25,3 +25,7 @@ Hsrc/test/java/com/spring/course_spring/CourseSpringApplicationTests.java,c/e/c
 mvnw.cmd,1/f/1f1763f358c257ea3515417352b82b0165647ad1
 4
 mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
+w
+Gsrc/main/java/com/spring/course_spring/repositories/UserRepository.java,b/5/b55ac7a7f7871969944ad35057025276c4d07cb7
+l
+<src/main/java/com/spring/course_spring/config/TetConfig.java,e/2/e2896139a20e4d6115fc8f2fb7166060c0b9b297
