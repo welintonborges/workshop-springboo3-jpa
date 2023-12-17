@@ -1,0 +1,9 @@
+
+h
+java:S3655"FCall "obj.isPresent()" or "!obj.isEmpty()" before accessing the value.(¨Ù±ıùÿÿÿÿ8âÅùÆ1
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+a
+java:S1128"DRemove this unused import 'com.spring.course_spring.entities.Order'.(İíŒµ8Ù’‚ùÆ1
+o
+java:S1128"RRemove this unused import 'com.spring.course_spring.repositories.OrderRepository'.(Ï…¡‹8Ù’‚ùÆ1
