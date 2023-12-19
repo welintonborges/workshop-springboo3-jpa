@@ -3,6 +3,7 @@ package com.spring.course_spring.resources;
 import com.spring.course_spring.entities.User;
 import com.spring.course_spring.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -33,5 +34,11 @@ public class UserResource {
         obj = userService.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).body(obj);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable  Long id){
+            userService.delete(id);
+            return ResponseEntity.noContent().build();
     }
 }
