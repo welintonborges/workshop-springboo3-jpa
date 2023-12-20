@@ -5,6 +5,7 @@ import com.spring.course_spring.repositories.UserRepository;
 import com.spring.course_spring.services.exceptions.DatabaseException;
 import com.spring.course_spring.services.exceptions.ResourceNotFoundException;
 import com.sun.source.tree.TryTree;
+import org.hibernate.action.internal.EntityActionVetoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -42,9 +43,14 @@ public class UserService {
     }
 
     public User update(Long id , User obj){
-        User entity = userRepository.getOne(id);
-        updateData(entity, obj);
-        return userRepository.save(entity);
+        try {
+            User entity = userRepository.getOne(id);
+            updateData(entity, obj);
+            return userRepository.save(entity);
+        }catch (EntityActionVetoException e){
+            throw new ResourceNotFoundException(id);
+        }
+
     }
     private void updateData(User entity, User obj) {
         entity.setName(obj.getName());
